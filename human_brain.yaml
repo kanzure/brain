@@ -491,6 +491,19 @@ dural meningeal system:
             spinal subarachnoid space:
 neurotransmitters:
     dopamine:
+        name:
+        - "2-(3,4-dihydroxyphenyl)ethylamine"
+        - "3,4-dihydroxyphenethylamine"
+        - "3-hydroxytyramine"
+        - "DA"
+        - "intropin"
+        - "revivan"
+        - "oxytyramine"
+        formula: C8H11NO2
+        molar mass: 153.18 g/mol
+        melting point: 128 °C, 401 K, 262 °F
+        solubility in water: 60.0 g/100 ml
+        precursor: *levodopa
         characteristics:
         - !blood-brain-barrier blocked #doesn't pass the barrier
         #not so sure about the following syntax.
@@ -502,6 +515,11 @@ neurotransmitters:
         - *hypothalamus
         inhibits:
         - *anterior-pituitary-prolactin
+        links:
+        - !wikipedia "[[dopamine]]"
+        - !cas 51-61-6
+        - !pubchem 681
+        - !chemspider 661
 neurotransmitter receptors:
     dopamine receptors:
         D1:
@@ -509,3 +527,48 @@ neurotransmitter receptors:
         D3:
         D4:
         D5:
+levodopa: &levodopa
+    names:
+    - "L-DOPA"
+    - "levodopa"
+    - "(S)-2-amino-3-(3,4-dihydroxyphenyl) propanoic acid"
+    links:
+    - !wikipedia "[[L-DOPA]]"
+    - !cas 59-92-7
+    - !atc N04BA01
+    - !pubchem 6047
+    - !drugbank APRD00309
+    - !chemspider 5824
+    formula: C9H11NO4 
+    molar mass: 197.19 g/mol
+    pharmokinetic data:
+        half life: 0.75–1.5 hours
+        excretion: renal 70–80%
+    legal status: OTC
+    routes: *oral
+
+#might as well
+routes of administration:
+    links:
+    - "http://web.archive.org/web/20071022035644/http://www.fda.gov/cder/dsm/DRG/drg00301.htm" #where most of this is from
+    entereal:
+        description: "desired effect is systemic (non-local), substance is given via the digestive tract."
+        oral: &oral
+            fda code: 001
+            nci concept id: C38288
+        gastric feeding tube:
+        duodenal feeding tube:
+        gastrostomy:
+        rectal:
+    topical:
+        description: "local effect, substance is applied directly where its action is desired."
+        epicutaneous:
+            description: application onto the epidermis (skin)
+        inhalation:
+        enema:
+        eye drops:
+        ear drops:
+        intranasal:
+        vaginal: #e.g., topical estrogens
+    parenteral:
+        description: "desired effect is systemic, substance is given by routes other than the digestive tract."
