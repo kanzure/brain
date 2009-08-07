@@ -158,7 +158,8 @@ prosencephalon:
                     lateral hypothalamus:
                         name: lateral nucleus
                         localization: anterior
-                    part of supraoptic nucleus: #is the lateral anterior region of the diencephalon's hypothalamus part of the supraoptic nucleus?
+                    shares: #is the lateral anterior region of the diencephalon's hypothalamus part of the supraoptic nucleus?
+                    - *supraoptic-nucleus
                 other nuclei of preoptic area:
                     links:
                     - !wikipedia "[[preoptic area]]"
