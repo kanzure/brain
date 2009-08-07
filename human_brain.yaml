@@ -1,0 +1,473 @@
+author: 'kanzure@gmail.com'
+urls:
+    - "http://en.wikipedia.org/w/index.php?title=List_of_regions_in_the_human_brain&oldid=303470767"
+
+rhombencephalon:
+    name: hindbrain
+    myelencephalon:
+        medulla oblongata:
+            medullary pyramids:
+            medullary cranial nerve nuclei:
+                links:
+                - !wikipedia "[[cranial nerve nuclei]]"
+                inferior salivatory nucleus:
+                nucleus ambiguus:
+                dorsal nucleus of vagus nerve:
+                hypoglossal nucleus:
+                solitary nucleus:
+    metencephalon:
+        links:
+        - !wikipedia "[[metencephalon]]"
+        pons:
+            respiratory centres:
+                pneumotactic centre:
+                apneustic centre:
+            pontine cranial nerve nuclei:
+                links:
+                - !wikipedia "[[cranial nerve nuclei]]"
+                chief nucleus of the trigeminal nerve sensory nucleus:
+                    links:
+                    - !wikipedia "[[trigeminal nerve]]"
+                motor nucleus for the trigeminal nerve:
+                abducens nucleus:
+                facial nerve nucleus:
+                vestibulocochlear nerve nuclei:
+                    links:
+                    - !wikipedia "[[vestibulocochlear nerve]]"
+                    - !wikipedia "[[vestibular nuclei]]"
+                    - !wikipedia "[[cochlear nuclei]]"
+                superior salivatory nucleus:
+        paramedian pontine reticular formation:
+        cerebellum:
+            cerebellum vermis:
+            cerebellar hemispheres:
+                anterior lobe:
+                posterior lobe:
+                flocculonodular lobe:
+            cerebellar nuclei:
+                fastigial nucleus:
+                globose nucleus:
+                emboliform nucleus:
+                dentate nucleus:
+mesencephalon:
+    name: midbrain
+    links:
+    - !wikipedia "[[mesencephalon]]"
+    tectum:
+        inferior colliculi:
+            links:
+            - !wikipedia "[[inferior colliculus]]"
+        superior colliculi:
+            links:
+            - !wikipedia "[[superior colliculus]]"
+    mesencephalic duct:
+        name: cerebral aqueduct, Aqueduct of Sylvius
+    cerebral peduncle:
+    midbrain tegmentum:
+        ventral tegmental area:
+        red nucleus:
+        crus cerebri:
+    pretectum:
+prosencephalon:
+    name: forebrain
+    links:
+    - !wikipedia "[[prosencephalon]]"
+    diencephalon:
+        epithalamus:
+            pineal gland:
+                name: pineal body
+            habenular nuclei:
+            stria medullares:
+            tenia thalami:
+        third  ventricle:
+        thalamus:
+            anterior nuclear group:
+                anteroventral nucleus:
+                anterodorsal nucleus:
+                anteromedial nucleus:
+            medial nuclear group:
+                medial dorsal nucleus:
+                midline nuclear group:
+                paratenial nucleus:
+                reuniens nucleus:
+                rhomboidal nucleus:
+                intralaminar nuclear group:
+                centromedial nucleus:
+                parafascicular nucleus:
+                paracentral nucleus:
+                central lateral nucleus:
+                central medial nucleus:
+            lateral nuclear group:
+                lateral dorsal nucleus:
+                lateral posterior nucleus:
+                pulvinar:
+            ventral nuclear group:
+                ventral anterior nucleus:
+                ventral lateral nucleus:
+                ventral posterior nucleus:
+                    ventral posterior lateral nucleus:
+                    ventral posterior medial nucleus:
+            metathalamus:
+                medial geniculate body:
+                lateral geniculate body:
+            thalamic reticular nucleus:
+        hypothalamus:
+            name: limbic system, HPA axis
+            links:
+            - !wikipedia "[[limbic system]]"
+            - !wikipedia "[[hypothalamus]]"
+            - !wikipedia "[[HPA axis]]"
+            anterior:
+                medial area:
+                    parts of preoptic area:
+                        links:
+                        - !wikipedia "[[preoptic area]]"
+                        medial preoptic nucleus:
+                    suprachiasmatic nucleus:
+                    paraventricular nucleus:
+                    supraoptic nulcues:
+                        notes:
+                        - mainly (according to wikipedia)
+                    anterior hypothalamic nucleus:
+                lateral area:
+                    parts of preoptic area:
+                        links:
+                        - !wikipedia "[[preoptic area]]"
+                        lateral preoptic nucleus:
+                    lateral hypothalamus:
+                        name: lateral nucleus
+                        localization: anterior
+                    part of supraoptic nucleus: #is the lateral anterior region of the diencephalon's hypothalamus part of the supraoptic nucleus?
+                other nuclei of preoptic area:
+                    links:
+                    - !wikipedia "[[preoptic area]]"
+                    median preoptic nucleus:
+                    periventricular preoptic nucleus:
+            tuberal:
+                medial area:
+                    dorsomedial hypothalamic nucleus:
+                    ventromedial nucleus:
+                    arcuate nucleus:
+                lateral area:
+                    lateral hypothalamus:
+                        name: lateral nucleus
+                        localization: tuberal
+                    lateral tuberal nuclei:
+            posterior:
+                medial area:
+                    mammillary nuclei:
+                        part of: mammillary bodies
+                    posterior nucleus:
+                        links:
+                        - !wikipedia "[[posterior nucleus (hypothalamus)]]"
+                lateral area:
+                    lateral nucleus:
+                        links:
+                        - !wikipedia "[[lateral hypothalamus]]"
+                        localization: posterior
+            optic chiasm:
+            subfornical organ:
+            periventricular nucleus:
+            infundibulum: #wtf
+            tuber cinereum:
+                tuberal nucleus:
+                tuberomamillary nuclues:
+            tuberal region:
+            mammillary bodies:
+            mammillary nucleus:
+        subthalamus:
+            name: subthalamus
+            links:
+            - !wikipedia "[[subthalamus]]"
+            - !wikipedia "[[HPA axis]]"
+            thalamic nucleus:
+            zona incerta:
+        pituitary gland:
+            name: pituitary gland
+            links:
+            - !wikipedia "[[pituitary gland]]"
+            - !wikipedia "[[HPA axis]]"
+            neurohypophysis:
+                localization: posterior #posterior pituitary
+                links:
+                - !wikipedia "[[posterior pituitary]]"
+            intermediate pituitary:
+            adenohypophysis:
+                localization: anterior #anterior pituitary
+                links:
+                - !wikipedia "[[anterior pituitary]]"
+    telencephalon:
+        name: cerebrum
+        links:
+        - !wikipedia "[[telencephalon]]"
+        - !wikipedia "[[cerebrum]]"
+        - !wikipedia "[[cerebral hemisphere]]s"
+        white matter:
+            corona radiata:
+            internal capsule:
+            external capsule:
+            extreme capsule:
+            arcuate fasciculus:
+            uncinate fasciculus:
+        subcortical:
+            amygdala:
+                name: paleopallium
+                links:
+                - !wikipedia "[[limbic system]]"
+                - !wikipedia "[[limbic lobe]]"
+                - !wikipedia "[[paleopallium]]"
+                central nucleus:
+                    links:
+                    - !wikipedia "[[autonomic nervous system]]"
+                medial nucleus:
+                    links:
+                    - !wikipedia "[[accessory olfactory system]]"
+                cortical nucleus:
+                    shares:
+                    - *main-olfactory-system
+                basomedial nuclei:
+                    shares:
+                    - *main-olfactory-system
+                lateral nucleus:
+                    shares:
+                    - *frontotemporal-cortical-system
+                basolateral nuclei:
+                    shares:
+                    - *frontotemporal-cortical-system
+            base head: &archipallium
+                name: archipallium
+                links:
+                - !wikipedia "[[archipallium]]"
+                - !wikipedia "[[limbic system]]"
+                - !wikipedia "[[limbic lobe]]"
+                dentate gyrus:
+                cornu ammonis:
+                    notes:
+                    - CA fields
+            claustrum:
+            basal ganglia:
+                striatum: *archipallium
+                    putamen:
+                    caudate nucleus:
+                    nucleus accumbens:
+                globus pallidus:
+                    shares:
+                    - *nucleus-lentiforms
+                    - *putamen
+                subthalamic nucleus:
+                substantia nigra:
+        rhinencephalon: &paleopallium
+            name: paleopallium
+            olfactory bulb:
+            piriform cortex:
+            anterior olfactory nucleus:
+            olfactory tract:
+            anterior commissure:
+        lateral ventricles:
+        cerebral cortex: &neopallium
+            name: neopallium
+            frontal lobe:
+                cortex:
+                    precentral gyrus:
+                        name: primary motor cortex
+                        abbreviation: M1
+                brodmann area 4:
+                    prefrontal cortex:
+                    supplementary motor cortex:
+                    premotor cortex:
+                    see also:
+                        - *brodmann-area-6
+                        - *brodmann-area-8
+                        - *brodmann-area-9
+                        - *brodmann-area-10
+                        - *brodmann-area-11
+                        - *brodmann-area-12
+                        - *brodmann-area-24
+                        - *brodmann-area-25
+                        - *brodmann-area-32
+                        - *brodmann-area-33
+                        - *brodmann-area-44
+                        - *brodmann-area-45
+                        - *brodmann-area-46
+                        - *brodmann-area-47
+                gyrus:
+                    superior frontal gyrus:
+                    middle frontal gyrus:
+                    inferior frontal gyrus:
+            temporal lobe:
+                cortex:
+                    primary auditory cortex:
+                        abbreviation: A1
+                    A2:
+                    inferior temporal cortex:
+                    posterior inferior temporal cortex:
+                gyrus:
+                    superior temporal gyrus:
+                    middle temporal gyrus:
+                    inferior temporal gyrus:
+                    fusiform gyrus:
+                    parahippocampal gyrus:
+                brodmann area:
+                    see also:
+                    - *brodmann-area-9
+                    - *brodmann-area-20
+                    - *brodmann-area-21
+                    - *brodmann-area-22
+                    - *brodmann-area-27
+                    - *brodmann-area-34
+                    - *brodmann-area-35
+                    - *brodmann-area-36
+                    - *brodmann-area-37
+                    - *brodmann-area-38
+                    - *brodmann-area-41
+                    - *brodmann-area-42
+            parietal lobe:
+                cortex:
+                    primary somatosensory cortex:
+                        abbreviation: S1
+                    S2:
+                    posterior parietal cortex:
+                gyrus:
+                    postcentral gyrus: &primary-sensory-cortex
+                        name: primary somesthetic area
+                        links:
+                        - !wikipedia "[[primary sensory cortex]]"
+                        - !wikipedia "[[postcentral gyrus]]"
+                other:
+                    precuneus:
+                brodmann areas:
+                    shares:
+                    - *brodmann-area-1
+                    - *brodmann-area-2
+                    - *brodmann-area-3
+                    - *brodmann-area-5
+                    - *brodmann-area-7
+                    - *brodmann-area-23
+                    - *brodmann-area-26
+                    - *brodmann-area-29
+                    - *brodmann-area-31
+                    - *brodmann-area-39
+                    - *brodmann-area-40
+                    - *primary-sensory-cortex
+            occipital lobe:
+                cortex:
+                    primary visual cortex: &primary-visual-cortex
+                        abbreviation: V1
+                        shares:
+                        - *brodmann-area-17
+                    V2:
+                gyrus:
+                    lateral occipital gyrus:
+                other:
+                    cuneus:
+                brodmann areas:
+                    shares:
+                    - *brodmann-area-17
+                    - *brodmann-area-18
+                    - *brodmann-area-19
+            insular cortex:
+            cingulate cortex:
+                subgenual area 25:
+                anterior cingulate:
+                posterior cingulate:
+                retrosplenial cortex: &retrosplenial-cortex
+                    name: retrosplenial region
+                    links:
+                    - !wikipedia "[[retrosplenial region]]"
+                indusium griseum:
+                brodmann areas:
+                    shares:
+                    - *brodmann-area-23
+                    - *brodmann-area-24
+                    - *brodmann-area-26
+                    - *brodmann-area-29
+                    - *brodmann-area-30
+                    - *brodmann-area-31
+                    - *brodmann-area-32
+                    - *retrosplenial-cortex
+neural pathways:
+    arcuate fasciculus:
+    cerebral peduncle:
+    corpus callosum:
+    pyramidal tract:
+        name: corticospinal tract
+    major dopamine pathways:
+        mesocortical pathway:
+        mesolimbic pathway:
+        nigrostriatal pathway:
+        tuberinfundibular pathway:
+    major serotonin pathways:
+        raphe nuclei:
+    motor systems:
+        name: volition #wtf wikipedia?
+        muscle:
+            extrapyramidal systems:
+            pyramidal tract:
+            alpha system:
+            gamma system:
+    nerves:
+        spinal cord:
+        brain stem:
+            cranial nerves:
+                cranial nerve: &cranial-nerve-0
+                    id: 0
+                olfactory nerve: &cranial-nerve-1
+                    id: 1
+                optic nerve: &cranial-nerve-2
+                    id: 2
+                occulomotor nerve: &cranial-nerve-3
+                    id: 3
+                trochlear nerve: &cranial-nerve-4
+                    id: 4
+                trigeminal nerve: &cranial-nerve-5
+                    id: 5
+                abducens nerve: &cranial-nerve-6
+                    id: 6
+                facial nerve: &cranial-nerve-7
+                    id: 7
+                vestibulochoclear nerve: &cranial-nerve-8
+                    id: 8
+                glossopharyngeal nerve: &cranial-nerve-9
+                    id: 9
+                vagus nerve: &cranial-nerve-10
+                    id: 10
+                accessory nerve: &cranial-nerve-11
+                    id: 11
+                hypoglossal nerve: &cranial-nerve-12
+                    id: 12
+neuroendocrine system:
+    HPA axis:
+circulatory systems:
+    name: vascular systems
+    venous systems:
+    arterial systems:
+        name: circle of Willis
+    blood-brain barrier:
+    blood-cerebrospinal fluid barrier:
+dural meningeal system:
+    brain-cerebrospinal fluid barrier:
+    meningeal coverings:
+        dura mater:
+        arachnoid mater:
+        pia mater
+    epidural space:
+    subdural space:
+    arachnoid septum:
+    ventricular system:
+        cerebrospinal fluid:
+            subarachnoid space:
+                third ventricle:
+                fourth ventricle:
+                lateral ventricles:
+                    anterior horn:
+                    body of lateral ventricle:
+                    inferior horn:
+                    posterior horn:
+                superior cistern:
+                cistern of lamina terminalis:
+                chaismatic cistern:
+                interpeduncular cistern:
+                pontine cistern:
+                cisterna magna:
+            spinal subarachnoid space:
+
