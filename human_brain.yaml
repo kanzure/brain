@@ -292,8 +292,50 @@ prosencephalon:
             olfactory tract:
             anterior commissure:
         lateral ventricles:
+        allocortex:
+            names:
+            - "heterotypic cortex"
+            notes:
+            - "has less than 6 layers"
+            - "the other 10% if 90% of the cerebral cortex is the neocortex"
+            includes:
+            - *olfactory-cortex
+            - *hippocampus
+            archicortex:
+            paleocortex:
         cerebral cortex: &neopallium
-            name: neopallium
+            names:
+                - neopallium
+                - isocortex
+                - homotypic cortex
+            characteristics:
+                - pyramidal neurons: 80% #excitatory
+                - interneurons: 20% #inhibitory
+                - sulci #deep grooves
+                - gyri #wrinkles
+                - gender differences:
+                    male:
+                        neurons: 23 billion
+                        matter: grey #primarily more grey matter
+                    female:
+                        neurons: 19 billion
+                        matter: white #primarily more white matter
+            notes:
+            - "sulci and gyri allow more cortical columns to be packed into the human brain, allowing for improved working memory"
+            - "in humans, 90% of the cerebral cortex is neocortex"
+            - "all mammals have six layers of neocortex"
+            layers: #of the neocortex
+                1:
+                2:
+                3:
+                4: #receives sensory information from the thalamus
+                5:
+                6:
+            neocortical columns:
+                diameter: 0.5mm
+                depth: 2mm
+                neurons: 60k #FIXME: see Markram's claim
+                total: 500k #500k neocortical columns in the human brain
             frontal lobe:
                 cortex:
                     precentral gyrus:
