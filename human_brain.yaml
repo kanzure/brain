@@ -57,7 +57,7 @@ mesencephalon:
         inferior colliculi:
             links:
             - !wikipedia "[[inferior colliculus]]"
-        superior colliculi:
+        superior colliculi: &superior-colliculi
             links:
             - !wikipedia "[[superior colliculus]]"
     mesencephalic duct:
@@ -112,7 +112,7 @@ prosencephalon:
                 lateral geniculate body:
             thalamic reticular nucleus:
         hypothalamus:
-            name: limbic system, HPA axis
+            name: limbic system, HPA axis #or should this be a list?
             links:
             - !wikipedia "[[limbic system]]"
             - !wikipedia "[[hypothalamus]]"
@@ -281,6 +281,14 @@ prosencephalon:
                     prefrontal cortex:
                     supplementary motor cortex:
                     premotor cortex:
+                        frontal eye fields: &frontal-eye-fields
+                            description: "initation of eye movements; voluntary saccades; pursuit eye movements"
+                            abbreviation: FEF
+                            shares:
+                            - *superior-colliculus-&-medial-dorsal-nucleus-&-FEF-ascending-pathway
+                            characteristics:
+                            - visual response time: 40..60ms
+                            - auditory response time: 30..60ms
                     see also:
                         - *brodmann-area-6
                         - *brodmann-area-8
@@ -563,7 +571,7 @@ routes of administration:
     topical:
         description: "local effect, substance is applied directly where its action is desired."
         epicutaneous:
-            description: application onto the epidermis (skin)
+            description: "application onto the epidermis (skin)"
         inhalation:
         enema:
         eye drops:
@@ -572,3 +580,9 @@ routes of administration:
         vaginal: #e.g., topical estrogens
     parenteral:
         description: "desired effect is systemic, substance is given by routes other than the digestive tract."
+eye movements:
+    see:
+    - *supplementary-eye-fields
+    - *intraparietal-sulci
+    - *superior-colliculi
+    - *frontal-eye-fields
