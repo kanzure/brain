@@ -1,0 +1,70 @@
+title: "ideas for how to express the location of regions of the brain"
+license: "GPL2+"
+---
+some_other_region: &some_other_region
+another_region: &another_region
+some_region: &some_region
+    location:
+    - !anterior-to *some_other_region
+    - !ventral-to *another_region
+---
+rhombencephalon:
+    name: hindbrain
+    myelencephalon:
+        medulla oblongata:
+            medullary pyramids:
+            medullary cranial nerve nuclei:
+    metencephalon:
+        pons:
+            respiratory centres:
+                pneumotactic centre:
+                apneustic centre:
+            pontine cranial nerve nuclei:
+            superior salivatory nucleus: #superior to what?
+        paramedian pontine reticular formation:
+        cerebellum:
+            cerebellum vermis:
+            hemispheres: #lobes/hemispheres of the cerebellum
+                anterior: &anterior-cerebellum
+                posterior: &posterior-cerebellum
+                flocculonodular: &flocculonodular-cerebellum
+            cerebellar nuclei:
+                fastigial nucleus:
+                globose nucleus:
+                emboliform nucleus:
+                dentate nucleus:
+---
+description: 'yet another attempt at working things out'
+cerebellum vermis: &cerebellum-vermis
+    #hierarchical parent
+    parent: *cerebellum
+
+cerebellar nuclei: &cerebellar-nuclei
+    parent: *cerebellum
+
+anterior cerebellum: &anterior-cerebellum
+    parent: *cerebellum
+
+posterior cerebellum: &posterior-cerebellum
+    parent: *cerebellum
+
+flocculonodular cerebellum: &flocculonodular-cerebellum
+    parent: *cerebellum
+
+cerebellum: &cerebellum
+    subregions:
+        - *cerebellum-vermis
+        - *cerebellar-nuclei
+        - *anterior-cerebellum
+        - *posterior-cerebellum
+        - *flocculonodular-cerebellum
+---
+description: "and another way"
+cerebellum: !region &cerebellum
+    subregions:
+        - cerebellum vermis: !region &cerebellum-vermis
+        - cerebellar nuclei: !region &cerebellar-nuclei
+        #not sure where flocculonodular cerebellum should go
+        - flocculonodular: &flocculonodular-cerebellum
+    anterior: &anterior-cerebellum
+    posterior: &posterior-cerebellum
