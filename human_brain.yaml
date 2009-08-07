@@ -64,7 +64,7 @@ mesencephalon:
         name: cerebral aqueduct, Aqueduct of Sylvius
     cerebral peduncle:
     midbrain tegmentum:
-        ventral tegmental area:
+        ventral tegmental areas: &ventral-tegmental-areas
         red nucleus:
         crus cerebri:
     pretectum:
@@ -196,6 +196,12 @@ prosencephalon:
                 localization: anterior #anterior pituitary
                 links:
                 - !wikipedia "[[anterior pituitary]]"
+                anterior pituitary prolactin: &anterior-pituitary-prolactin !secretion
+                    secretes:
+                    - prolactin
+                    inhibited by:
+                    #inhibited by dopamine (neurohormone) from the hypothalamus
+                    - *dopamine
     telencephalon:
         name: cerebrum
         links:
@@ -255,7 +261,7 @@ prosencephalon:
                     - *nucleus-lentiforms
                     - *putamen
                 subthalamic nucleus:
-                substantia nigra:
+                substantia nigra: &substantia-nigra
         rhinencephalon: &paleopallium
             name: paleopallium
             olfactory bulb:
@@ -294,7 +300,20 @@ prosencephalon:
                     superior frontal gyrus:
                     middle frontal gyrus:
                     inferior frontal gyrus:
-            temporal lobe:
+                anterior to:
+                - *parietal-lobe
+                - *temporal-lobe
+                above to:
+                - *temporal-lobe
+                disease:
+                    - schizophrenia: !disease
+                        indicators:
+                        - poor axon myelination
+                connections: #don't know if I like this section or not
+                    - thalamic connection: *thalamus
+                        neurotransmitters:
+                        - dopamine
+            temporal lobe: &temporal-lobe
                 cortex:
                     primary auditory cortex:
                         abbreviation: A1
@@ -321,7 +340,7 @@ prosencephalon:
                     - *brodmann-area-38
                     - *brodmann-area-41
                     - *brodmann-area-42
-            parietal lobe:
+            parietal lobe: &parietal-lobe
                 cortex:
                     primary somatosensory cortex:
                         abbreviation: S1
@@ -470,4 +489,23 @@ dural meningeal system:
                 pontine cistern:
                 cisterna magna:
             spinal subarachnoid space:
-
+neurotransmitters:
+    dopamine:
+        characteristics:
+        - !blood-brain-barrier blocked #doesn't pass the barrier
+        #not so sure about the following syntax.
+        - !inhibits *anterior-pituitary-prolactin
+        produced by: #from
+        - *substantia-nigra
+        - *ventral-tegmental-areas
+        #dopamine is released by the hypothalamus as a neurohormone
+        - *hypothalamus
+        inhibits:
+        - *anterior-pituitary-prolactin
+neurotransmitter receptors:
+    dopamine receptors:
+        D1:
+        D2:
+        D3:
+        D4:
+        D5:
