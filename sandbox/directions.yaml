@@ -11,16 +11,28 @@ posterior: &posterior
 ventral: &ventral
     description: "toward or on or near the belly (front of a primate or lower surface of a lower animal; nearest to or facing toward the axis of an organ or organism"
     opposite: *dorsal
+    combines with:
+    - *medial
+    - *lateral
 dorsal: &dorsal
     description: "belonging to or on or near the back or upper surface of an animal or organ or part; facing away from the axis of an organ or organism"
     opposite: *ventral
+    combines with:
+    - *medial
+    - *lateral
 
 lateral: &lateral
     description: "situated at or extending to the side; lying away from the median and sagittal plane of a body"
     opposite: *medial
+    combines with:
+    - *ventral
+    - *dorsal
 medial: &medial
     description: "dividing an animal into right and left halves; relating to or situated in or extending toward the middle"
     opposite: *lateral
+    combines with:
+    - *ventral
+    - *dorsal
 
 saggital:
     description: "located in a plane that is parallel to the central plane of the sagittal suture"
@@ -37,5 +49,5 @@ axial:
     description: "situated on or along or in the direction of an axis"
 basal:
     description: "located at the base of a plant or stem; especially arising directly from the root or rootstock or a root-like stem"
-
-
+temporal:
+    description: "of or relating to the temples (the sides of the skull behind the orbit)"
