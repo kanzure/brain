@@ -299,7 +299,7 @@ prosencephalon:
                         abbreviation: M1
                         shares:
                         - *brodmann-area-4
-                brodmann area 4:
+                brodmann area 4: &brodmann-area-4
                     prefrontal cortex:
                     supplementary motor cortex:
                     premotor cortex:
