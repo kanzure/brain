@@ -1,6 +1,26 @@
 author: 'kanzure@gmail.com'
 urls:
     - "http://en.wikipedia.org/w/index.php?title=List_of_regions_in_the_human_brain&oldid=303470767"
+citations: #unorganized
+    - cytoarchitektonik: "Constantin von Economo & Georg N. Koskinas (1925). Die Cytoarchitektonik der Hirnrinde des erwachsenen Menschen. Vienna and Berlin: Julius Springer."
+        see also:
+            - "Atlas of cytoarchitectonics of the adult human cerebral cortex"
+            - "Zellaufbau der Großhirnrinde"
+            - "The cellular architecture of the cerebral cortex"
+            - "Die cytoarchitektonik der hirnrinde des erwachsenen menschen"
+    - "Meynert, T. (1872) Der Bau der Gross-Hirnrinde und seine örtlichen Verschiedenheiten, nebst einem pathologisch–anatomischen Corollarium. J.H. Heuser’sche Verlagsbuchhandlung, Neuwied & Leipzig."
+    - "Campbell, A.W. (1903) Histological studies on cerebral localisation. Proceedings of the Royal Society of London 72: 488-492."
+    - "Elliot Smith, G. (1907) A new topographical survey of the human cerebral cortex, being an account of the distribution of the anatomically distinct cortical areas and their relationship to the cerebral sulci. Journal of Anatomy and Physiology (London) 41: 237-254."
+    - "Brodmann, K. (1909) Vergleichende Lokalisationslehre der Grosshirnrinde in ihren Prinzipien dargestellt auf Grund des Zellenbaues. Johann Ambrosius Barth, Leipzig."
+    - "Garey, L.J. (2006) Brodmann’s Localisation in the Cerebral Cortex. Springer Science, New York."
+    - "Economo, C. von, Koskinas, G.N. (1925) Die Cytoarchitektonik der Hirnrinde des erwachsenen Menschen. Julius Springer, Vienna."
+    - "Economo, C. von, Koskinas, G.N. (2008) Atlas of Cytoarchitectonics of the Adult Human Cerebral Cortex (translated, revised and edited by L.C. Triarhou). Karger, Basel."
+queries:
+    #useful search terms
+    - "cytoarchitectonic map"
+    - "brodmann areas"
+    - "von economo"
+    - "neuroanatomy"
 
 rhombencephalon:
     name: hindbrain
@@ -277,6 +297,8 @@ prosencephalon:
                     precentral gyrus:
                         name: primary motor cortex
                         abbreviation: M1
+                        shares:
+                        - *brodmann-area-4
                 brodmann area 4:
                     prefrontal cortex:
                     supplementary motor cortex:
@@ -325,6 +347,10 @@ prosencephalon:
                 cortex:
                     primary auditory cortex:
                         abbreviation: A1
+                        shares:
+                        #41 & 42 "sort of" correspond to A1
+                        - *brodmann-area-41
+                        - *brodmann-area-42
                     A2:
                     inferior temporal cortex:
                     posterior inferior temporal cortex:
@@ -352,6 +378,10 @@ prosencephalon:
                 cortex:
                     primary somatosensory cortex:
                         abbreviation: S1
+                        shares:
+                        - *brodmann-area-1
+                        - *brodmann-area-2
+                        - *brodmann-area-3
                     S2:
                     posterior parietal cortex:
                 gyrus:
@@ -586,3 +616,119 @@ eye movements:
     - *intraparietal-sulci
     - *superior-colliculi
     - *frontal-eye-fields
+Broca speech area: &broca-speech
+    localization: left #left brodmann area 44
+    shares:
+    - *brodmann-area-44
+Broca language area: &broca-language
+    localization: left #left brodmann area 45
+    shares:
+    - *brodmann-area-45
+brodmann areas:
+    1: *primary-somatosensory-cortex
+    2: *primary-somatosensory-cortex
+    3: *primary-somatosensory-cortex
+    4: *primary-motor-cortex
+    5: *somatosensory-association-cortex
+    6:
+        shares:
+        - *premotor-cortex
+        #secondary motor cortex or supplementary motor area
+        - *secondary-motor-cortex
+        - *supplementary-motor-area
+    7: *somatosensory-association-cortex
+    8: *frontal-eye-fields
+    9: *dorsolateral-prefrontal-cortex
+    10: *anterior-prefrontal-cortex 
+        #most rostral part of superior and middle frontal gyri
+    11: *orbitofrontal-area
+        #orbital and rectus gyri, plus part of the rostral part of the superior frontal gyrus
+    12: *orbitofrontal-area
+        #used to be part of BA11, refers to the area between the superior frontal gyrus and the inferior rostral sulcus
+    13: *insular-cortex
+    14: *insular-cortex
+    15: *anterior-temporal-lobe
+    #FIXME: 16?
+    17: *primary-visual-cortex
+        #V1
+    18: *secondary-visual-cortex
+        #V2
+    19: *associative-visual-cortex
+        #V3
+    20: *inferior-temporal-gyrus
+    21: *middle-temporal-gyrus
+    22: *superior-temporal-gyrus
+    23: *posterior-cingulate-cortex
+        localization: ventral #ventral posterior-cingulate cortex
+    24: *anterior-cingulate-cortex
+        localization: ventral #ventral anterior cingulate cortex
+    25: *subgenual-cortex
+    26: *ectosplenial-area
+    27: *piriform-cortex
+    28: *entorhinal-cortex
+        localization: posterior
+    29: *retrosplenial-cingulate-cortex
+    30: *cingulate-cortex
+        #er, part of it
+    #FIXME: maybe should be *posterior-cingulate-cortex?
+    31: *cingulate-cortex
+        localization: dorsal posterior
+    32: *cingulate-cortex
+        localization: dorsal anterior
+    33: *cingulate-cortex
+        localization: anterior
+    34: *entorhinal-cortex
+        shares:
+        - *parahippocampal-gyrus
+        localization: anterior
+    35: *perirhinal-cortex
+        shares:
+        - *parahippocampal-gyrus
+    36: *perirhinal-cortex
+        shares:
+        - *parahippocampal-gyrus
+    37: *fusiform-gyrus
+    38: *temporopolar-area
+        #rostral parat of the superior and middle temporal gyri
+        localization: rostral
+        shares:
+        - *superior-temporal-gyri
+        - *middle-temporal-gyri
+    39: *angular-gyrus
+        notes:
+        - "considered by some to be part of Wernicke's area"
+        shares:
+        - *wernicke-area
+    40: *supramarginal-gyrus
+        notes:
+        - "considered by some to be part of Wernicke's area"
+        shares:
+        - *wernicke-area
+    41: *primary-association-cortex
+    42: *auditory-association-cortex
+    43: *subcentral-area
+        notes:
+        - "between insula and post/precentral gyrus"
+    44: *pars-opercularis
+        shares:
+        - *broca-area
+    45: *pars-triangularis
+        shares:
+        - *broca-area
+    46: *prefrontal-cortex
+        localization: dorsolateral
+    #47 - inferior prefrontal gyrus
+    47: *gyrus
+        localization: inferior prefrontal
+    48: *retrosubicular-area
+        notes:
+        - "a small part of the medial surface of the temporal lobe"
+        shares:
+        - *medial-surface-of-the-temporal-lobe
+    52: *parainsular-area
+        notes:
+        - "at the junction of the temporal lobe and the insula"
+        shares:
+        - !junction
+            - *temporal-lobe
+            - *insula
