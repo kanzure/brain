@@ -776,3 +776,10 @@ brodmann areas:
         - !junction
             - *temporal-lobe
             - *insula
+
+sulci:
+gyri:
+    notes:
+    - "increased left frontal lobe gyrification in autism"
+    - "schizophrenia development with increased gyrification in brodmann areas 9 & 10"
+    -
