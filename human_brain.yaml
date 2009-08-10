@@ -86,6 +86,13 @@ mesencephalon:
     cerebral peduncle:
     midbrain tegmentum:
         ventral tegmental areas: &ventral-tegmental-areas
+            characteristics:
+            - !supplies dopamine to nucleus accumbens, prefrontal cortex #reward learning
+            - GABA
+            - glutamate neurons
+            diseases:
+            #overactivity of VTA dopaminergic projections
+            - *schizophrenia
         red nucleus:
         crus cerebri:
     pretectum:
@@ -273,17 +280,115 @@ prosencephalon:
                     notes:
                     - CA fields
             claustrum:
-            basal ganglia:
-                striatum: *archipallium
+            basal ganglia: &basal-ganglia
+                names:
+                - "basal ganglia"
+                - "basal nuclei"
+                links:
+                - !wikipedia "[[basal ganglia]]"
+                - !wikipedia "[[Anatomical subdivisions and connections of the basal ganglia]]"
+                - International Basal Ganglia Society: !link "http://www.ibags.info/"
+                diseases:
+                - "movement disorders"
+                #degeneration of the dopamine cells in the substantia nigra
+                - *parkinsons
+                #damage to the striatium
+                - *huntingtons
+                - *tourettes
+                - *obsessive-compulsive-disorder
+                functions:
+                - *motor-control
+                - *learning
+                - *action-selection
+                #signals from the prefrontal cortex -> behavior switching
+                - *prefrontal-cortex-behavior-switching
+                - motivation:
+                    see:
+                    - *nucleus-accumbens
+                    - *ventral-pallidium
+                    - *ventral-tegmental-areas
+                    notes:
+                    - "dopaminergic projections from the VTA to the NA play a central role in the reward system"
+                    - "Animals with stimulating electrodes implanted along this pathway will bar-press very energetically if each press is followed by a brief pulse of electrical current."
+                inhibitory to:
+                - motor systems #thus causing activity in those systems
+                connections:
+                    direct pathway:
+                        path: cortex -> striatium -> GPi -> thalamus -> cortex
+                        notes:
+                        - two of these links are excitatory
+                        - two of these links are inhibitory
+                        - net effect is excitatory
+                        - the cortex excites itself via the direct pathway
+                    indirect pathway:
+                        path: cortex -> striatum -> GPe -> STN -> GPi -> thalamus -> cortex
+                        notes:
+                        - three of these links are inhibitory
+                        - two of these links are excitatory
+                        - net effect is inhibitory
+                        - the cortex inhibits itself via the indirect pathway
+                neurotransmitters:
+                    glutamate: #GABA
+                        effect: inhibitory #GABA inhibits the basal ganglia in general
+                    acetylcholine:
+                        localization: *striatum
+                    dopamine:
+                        #used by the projection from the substantia nigra pars compacta to the striatum, and also in the analagous projection from the ventral tegmental area to the nucleus accumbens
+                IBAGS structure: 
+                    description: "structure according to the International Basal Ganglia Societ"
+                    striatium:
+                    pallidium:
+                        nuclei1:
+                        nuclei2:
+                    substantia nigra:
+                        part1:
+                        part2:
+                    subthalamic nucleus:
+                    see also:
+                    #Percheron et al. (1991)
+                    - *centre-median-parafascicular-of-the-thalamus
+                    #Mena-Segovia et al. (2004)
+                    - *pedunculopontine-complex
+                striatum: *archipallium &striatum
+                    description: "receives dendritic input from many brain regions but only has axons to other regions of the basal ganglia."
                     putamen:
                     caudate nucleus:
-                    nucleus accumbens:
+                    nucleus accumbens: &nucleus-acumbens &ventral-striatium
+                        names:
+                        - nucleus accumbens
+                        - ventral striatium
+                    inputs:
+                    - *cerebral-cortex
+                    outputs:
+                    - !combination
+                        internal regions:
+                        - internal segment of the globus pallidius (GPe)
+                        - reticular part of the substantia nigra (SNr)
+                        to: *thalamus
+                    - basal ganglia striatum to pallidium:
+                        via: *subthalamic-nucleus
+                        to: *pallidium
+                pallidium: &pallidium
+                    #is this the same thing as ventral pallidium?
+                    input from: #archipallium/striatum
+                    - *striatum
+                    output:
+                    - !inhibits *thalamus-region-that-projects-into-motor-related-areas-of-the-cortex
                 globus pallidus:
                     shares:
                     - *nucleus-lentiforms
                     - *putamen
                 subthalamic nucleus:
+                    input:
+                    - *striatium
+                    output:
+                    - *pallidium
                 substantia nigra: &substantia-nigra
+                    similar to: *pallidium
+                    output:
+                    - !dopamine !to *striatium
+                ventral pallidium: &ventral-pallidium
+                ventral tegmental areas: *ventral-tegmental-areas
         rhinencephalon: &paleopallium
             name: paleopallium
             olfactory bulb:
@@ -571,6 +676,36 @@ dural meningeal system:
                 pontine cistern:
                 cisterna magna:
             spinal subarachnoid space:
+mesolimbic dopaminergic pathway:
+    ventral tegmental areas: *ventral-tegmental-areas
+    nucleus acumbens: *nucleus-acumbens
+        localization: !in ventral striatum #the nucleus acumbens is in the ventral striatum
+        characteristics:
+        - neurons:
+            name: medium spiny neurons
+            references:
+            - "Zhang TA, Maldve RE, Morrisett RA. 2006. Coincident signaling in mesolimbic structures underlying alcohol reinforcement. Biochemical Pharmacology 72:919-27"
+            - "Purves D et al. 2008. Neuroscience. Sinauer 4ed. 754-56"
+        shell:
+            name: limbic region
+        core:
+            name: motor region
+        medium spiny neurons:
+            dendrites:
+                neurotransmitters:
+                - dopamine
+                - glutamate
+                from:
+                - dopaminergic neurons of the ventral-tegmental-areas
+                - glutamatergic neurons of the hippocampus
+                - glutamatergic neurons of the amygdala
+                - glutamatergic neurons of the medial prefrontal cortex
+            axons:
+                neurotransmitters:
+                - GABA #medium spiny neurons mostly release GABA
+                to:
+                - *ventral-pallidium #part of the basal ganglia
+
 neurotransmitters:
     dopamine:
         name:
@@ -602,6 +737,8 @@ neurotransmitters:
         - !cas 51-61-6
         - !pubchem 681
         - !chemspider 661
+        notes:
+        - "Administration of the dopamine precursor levodopa enhances learning in healthy subjects and stroke patients"
 neurotransmitter receptors:
     dopamine receptors:
         D1:
@@ -783,3 +920,32 @@ gyri:
     - "increased left frontal lobe gyrification in autism"
     - "schizophrenia development with increased gyrification in brodmann areas 9 & 10"
     -
+parkinsons: &parkinsons
+    names:
+    - "Parkinson's disease"
+    - "paralysis of the will"
+adderall: &adderall
+    mechanisms of action:
+    - "enhanced dopaminergic activity, primarily in the mesolimbic dopaminergic pathway"
+    - "binds to the dopamine transporter (DAT) and blocks the transporter's ability to clear dopamine (DA) from the synapse"
+    - "In addition, amphetamine is transported into the cell, which leads to dopamine efflux (DA is transported out of the cell and into the synaptic space via reverse transport of the DAT)."
+    - "inhibits monoamine oxidase A and monoamine oxidase B (MAO-A and MAO-B)"
+    - "releases more neurotransmitters into the synapse, and prolongs their availibility by slowing their removal"
+    - "blocks reuptake of dopamine and norepinephrine"
+    - "inhibits reuptake of monoamines"
+    - "Amphetamines are similar in structure to dopamine, and so can enter the terminal button of the presynaptic neuron via its dopamine transporters as well as by diffusing through the neural membrane directly. once inside the presynaptic neuron, amphetamines force the dopamine molecules out of their storage vesicles and expel them into the synaptic gap by making the dopamine transporters work in reverse."
+    - "Amphetamines may also excite dopaminergic neurons via glutamate neurons. Amphetamines would thus remove an inhibiting effect due to metabotropic glutamate receptors. By thus releasing this natural brake, amphetamines would make the dopaminergic neurons more readily excitable."
+    - "both the releasing AMPH and uptake-inhibiting actions of MPH and AMPH and related compounds are mediated by the catecholamine uptake transporter which has been studied for over 40 years"
+    - "DA transporter protein direction is reversed by the presence of AMPH; once the DA transporter protein takes AMPH into the cell, it releases AMPH and takes DA out of the cell on its journey back towards the outside of the cell"
+    - ""
+    - "alternates between salts every 120 minutes"
+    side effects:
+        - "dry mouth causes bad breath"
+    inhibits:
+        - MAO-A
+        - MAO-B
+methylphenidate:
+    abbreviation: MPH
+    notes:
+    - "one protein (SNAP 25) is responsible for action-potential-related migration of presynaptic catecholamine vesicles, which, when this protein is altered, results in a lack of MPH responsiivity" #Steffensen SC, Henriksen SJ, Wilson MC. Transgenic rescue of SNAP-25 restores dopamine-modulated synaptic transmission in the coloboma mutant. Brain Res 1999;847:186-195
+
