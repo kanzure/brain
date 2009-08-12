@@ -42,11 +42,14 @@ def yaml_ref(name):
     return return_name
 
 def print_data(annotation):
+    gene_ids = []
     for gene_data in annotation:
         gene_id = gene_data["Id"]
         gene_symbol = gene_data["NomenclatureSymbol"]
         gene_name = gene_data["Description"]
-        print "%s: &%s\n\tentrez id: %s\n\tgene symbol: %s\n\tgene name: \"%s\"" % (gene_symbol, gene_symbol, gene_id, gene_symbol, gene_name)
+        if not gene_id in gene_ids:
+            print "%s: &%s\n    entrez id: %s\n    gene symbol: %s\n    gene name: \"%s\"" % (gene_symbol, gene_symbol, gene_id, gene_symbol, gene_name)
+            gene_ids.append(gene_id)
 
 if __name__ == "__main__":
     file_handler = open("../allenbraininstitute/entrez_geneid_list_human-cortices.txt")
