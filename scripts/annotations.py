@@ -37,6 +37,7 @@ def yaml_ref(name):
     return_name = copy(str(name))
     return_name = return_name.replace(" ", "_")
     return_name = return_name.replace(",", "-")
+    return_name = return_name.replace("'", "-")
     return_name = return_name.lower()
     return return_name
 
@@ -45,11 +46,11 @@ def print_data(annotation):
         gene_id = gene_data["Id"]
         gene_symbol = gene_data["NomenclatureSymbol"]
         gene_name = gene_data["Description"]
-        print "%s: &%s\n\tentrez id: %s\n\tgene symbol: %s\n\tgene name: %s" % (gene_name, yaml_ref(gene_name), gene_id, gene_symbol, gene_name)
+        print "%s: &%s\n\tentrez id: %s\n\tgene symbol: %s\n\tgene name: \"%s\"" % (gene_symbol, gene_symbol, gene_id, gene_symbol, gene_name)
 
 if __name__ == "__main__":
     file_handler = open("../allenbraininstitute/entrez_geneid_list_human-cortices.txt")
     id_list = file_handler.read()
     id_list = id_list.split("\n")
-    annotation = retrieve_annotation(id_list[:10])
+    annotation = retrieve_annotation(id_list)
     print_data(annotation)
