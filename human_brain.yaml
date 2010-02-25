@@ -350,7 +350,9 @@ prosencephalon:
                     #Mena-Segovia et al. (2004)
                     - *pedunculopontine-complex
                 striatum: *archipallium &striatum
-                    description: "receives dendritic input from many brain regions but only has axons to other regions of the basal ganglia."
+                    description:
+                        - "receives dendritic input from many brain regions but only has axons to other regions of the basal ganglia."
+                        - "a trio of brain regions that includes the nucleus acumbens"
                     putamen:
                     caudate nucleus:
                     nucleus accumbens: &nucleus-acumbens &ventral-striatium
@@ -359,6 +361,10 @@ prosencephalon:
                         - ventral striatium
                     inputs:
                     - *cerebral-cortex
+
+                    #see George A. Ricaurte, 2005 re: baboons/squirrels
+                    - *brain-stem
+
                     outputs:
                     - !combination
                         internal regions:
@@ -368,6 +374,9 @@ prosencephalon:
                     - basal ganglia striatum to pallidium:
                         via: *subthalamic-nucleus
                         to: *pallidium
+                    - neurotransmitters:
+                        - dopamine
+                    - dopamine transporters
                 pallidium: &pallidium
                     #is this the same thing as ventral pallidium?
                     input from: #archipallium/striatum
@@ -378,7 +387,7 @@ prosencephalon:
                     shares:
                     - *nucleus-lentiforms
                     - *putamen
-                subthalamic nucleus:
+                subthalamic nucleus: &subthalamic-nucleus
                     input:
                     - *striatium
                     output:
