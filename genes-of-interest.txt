@@ -1,0 +1,16 @@
+asperger's/autism:
+    DISC1: !study
+        PMID: 17579608
+    MAOA-uVNTR: !study
+        title: "Association of autism severity with a monoamine oxidase A functional polymorphism. "
+        citation: "Clinical Genetics. 64(3):190-197, September 2003."
+        authors: "Cohen, I L a; Liu, X d; Schutz, C d; White, B N g; Jenkins, E C b; Brown, W T c; Holden, J JA d,e,f"
+        notes:
+        - "low activity MAOA reporter correlated with low IQ and severe autistic symptoms"
+
+obsessive compulsive disorder:
+    TPH2:
+        name: "tryptophan hydroxylase 2"
+        links:
+        - "http://www.snpedia.com/index.php/TPH2"
+
